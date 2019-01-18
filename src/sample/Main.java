@@ -35,6 +35,10 @@ public class Main extends Application {
 
     private BufferedImage image = null;
 
+//    static {System.loadLibrary("ABC");}
+
+//    public static native void process(int pixarr[]);
+
     @Override
     public void start(Stage primaryStage) throws Exception{
 //        Parent root = FXMLLoader.load(getClass().getResource("sample.fxml"));
@@ -100,7 +104,7 @@ public class Main extends Application {
             @Override
             public void handle(ActionEvent actionEvent) {
                 if (image == null) {
-                    return 0;
+                    return;
                 }
                 int pixelBuffer[] = new int[image.getWidth() * image.getHeight()];
                 for (int y = 0; y < image.getHeight(); y++)
